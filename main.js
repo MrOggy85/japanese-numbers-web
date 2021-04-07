@@ -46,15 +46,19 @@ function enter() {
 const synth = window.speechSynthesis;
 
 function speak(text) {
-  // console.log('window.speechSynthesis', window.speechSynthesis)
   var utterThis = new SpeechSynthesisUtterance(text);
   voices = synth.getVoices();
+  let foundJapanese = false;
   voices.forEach(x => {
-    if (x.lang.includes('ja')) {
+    if (x.lang.toLowerCase().includes('ja')) {
       utterThis.voice = x;
+      foundJapanese = true;
     }
   })
 
+  if (!foundJapanese) {
+    alert('Your browser does not have a Japanese voice. Please try on Desktop instead.');
+  }
 
   synth.speak(utterThis);
 }
