@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Japanese Numbers</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Oskar Lindgren is a Frontend Dev with experince with React, React Native, Vue. As a Fullstack Dev he also uses Node.js, Go, Java and C#.">
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Welcome to Japanese Numbers!</h1>
+
+    <p id="result">&nbsp;</p>
+    <p id="message">Press ENTER for next number</p>
+
+    <button id="enter">ENTER</button>
+    <input id="guessInput" type="text" />
+    <button id="guess">GUESS</button>
+  </div>
+  <div class="stats-wrapper">
+    <p>Stats: <span id="stats" /></p>
+    <p>Success Rate: <span id="rate" /></p>
+  </div>
+  <div class="option-wrapper">
+    <label for="maxNumber">Max Number</label>
+    <input id="maxNumber" type="number" />
+  </div>
+  <div class="creator-wrapper">
+    <p>Created by: <a href="https://www.oskarlindgren.se">Oskar Lindgren</a></p>
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
